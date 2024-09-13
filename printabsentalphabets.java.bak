@@ -1,0 +1,27 @@
+import java.util.Scanner;
+class printabsentalphabets 
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter a string");
+		String s=sc.nextLine();
+		for(char i='A';i<='Z';i++)
+		{
+			boolean is present=false;
+			for(int j=0;j<=s.length()-1;i++)
+			{
+				if(i==s.charAt(j))
+				{
+					is present=true;
+					break;
+				}
+			}
+			if(is present==false)
+			{
+				System.out.println(i);
+			}
+		}
+
+	}
+}

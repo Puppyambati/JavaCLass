@@ -1,0 +1,46 @@
+class College 
+{
+	abstract public void addStudent();
+    abstract public void removeStudent();
+    abstract public void updateStudent();
+    abstract public void selectStudent();
+}
+class CollegeManagement implements College
+{
+	public void addStudent()
+	{
+		System.out.println("student added");
+	}
+	public void removeStudent()
+	{
+		System.out.println("student remove");
+	}
+	public void updeateStudent()
+	{
+		System.out.println("student update");
+	}
+	public void selectStudent()
+	{
+		System.out.println("student select");
+	}
+	
+}
+class Department
+{
+	public static College getCollege()
+	{
+		College c=new CollegeManagement();
+		return c;
+	}
+}
+class mainCollege
+{
+	public static void main(String[] args) 
+	{
+		College clg=Department.getCollege();
+		clg.addStudent();
+		clg.removeStudent();
+		clg.updateStudent();
+		clg.selectStudent();
+	}
+}
